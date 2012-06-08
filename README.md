@@ -13,7 +13,7 @@ Django currencies lets you convert prices to foreign currencies for display purp
 ### Installation
 
 * Copy currencies/ to your project's folders
-* Add 'currencies' to your INSTALLED`_`APPS at settings.py
+* Add 'currencies' to your INSTALLED_APPS at settings.py
 
 ### Admin
 
