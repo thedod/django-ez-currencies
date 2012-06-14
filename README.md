@@ -14,10 +14,11 @@ Django currencies lets you convert prices to foreign currencies for display purp
 
 * Copy currencies/ to your project's folders
 * Add 'currencies' to your INSTALLED_APPS at settings.py
-
+* Do `./manage.py syncdb`
+* Optional: do `./manage.py loaddata currencies defaults` to load sample initial data
 ### Admin
 
-You need to add a **single** `Base currency` (if you have more than one, only the first one will be used):
+You need to have a **single** `Base currency` (if you have more than one, only the first one will be used):
 
 * Enter ISO code (e.g. 'USD'), name (e.g. 'US Dollar'), and symbol (e.g. '$')
 * Decide how long (in minutes) before cached rates expire.
