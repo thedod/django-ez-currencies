@@ -7,8 +7,8 @@ Django currencies lets you convert prices to foreign currencies for display purp
 
 * You can use the `to_currency` template filter to display a price in a currency (base or foreign).
 
-* You can use the `currency_form` template filter in order to render a currency selection form for
-  the user.
+* You can use the `currency_form` and `currency_mini_form` template filters in order to
+  render a currency selection form for the user.
 
 ### Installation
 
@@ -34,6 +34,9 @@ You need to have a **single** `Base currency` (if you have more than one, only t
 * You can render a currency selection form with
   `{% with f='GBP'|currency_form %}{{ f.as_p }}{% endwith %}`
   this will render a `select` tag of all foreign currencies, with GBP as the selected option.
+* `{% with f=user.profile.currency|currency_mini_form %}{{ f.as_li }}{% endwith %}`
+  does something similar, but option text is only the currency symbol
+  (e.g. `$` instead of `US Dollar ($)`).
 
 ### Note
 
