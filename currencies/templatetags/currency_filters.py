@@ -18,3 +18,7 @@ def to_currency(price,currency):
 @register.filter
 def currency_form(default):
     return forms.currency_form(base_currency(),default)
+
+@register.filter
+def currency_mini_form(default):
+    return forms.currency_form(base_currency(),default,mini=True)
