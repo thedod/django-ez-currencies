@@ -31,6 +31,7 @@ class BaseCurrency(models.Model):
                 result = decimal.Decimal(base_price)/rate
         return decimal.Decimal(result).quantize(decimal.Decimal('0.01'))
     def invalidate(self):
+        self.save()
         for fc in self.foreign_currencies.all():
             fc.invalidate()
     class Meta:
