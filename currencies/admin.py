@@ -27,5 +27,6 @@ class ForeignCurrencyInline(admin.TabularInline):
 class BaseCurrencyAdmin(admin.ModelAdmin):
     inlines = [ForeignCurrencyInline]
     def save_model(self, request, obj, form, change):
+        obj.save()
         obj.invalidate()
 admin.site.register(BaseCurrency,BaseCurrencyAdmin)
